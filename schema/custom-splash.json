@@ -1,0 +1,16 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "Custom Splash",
+  "description": "Custom splash settings.",
+  "type": "object",
+  "properties": {
+    "splashGifSetting": {
+      "title": "Splash Screen",
+      "description": "Choose a splash screen",
+      "type": "string",
+      "enum": ["Ricardo", "Shrek", "Snow", "Fridge", "Ratatouille", "Pig", "Monkey", "Ricardo_2", "Transformers", "SanAndreas", "OmNom", "Football"],
+      "default": "Ricardo"
+    }
+  },
+  "additionalProperties": false
+}

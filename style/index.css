@@ -1,0 +1,23 @@
+@import url('base.css');
+
+.splash {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.ricardo-splash {
+    display: block;
+    width: auto;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
