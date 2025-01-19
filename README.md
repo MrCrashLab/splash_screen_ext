@@ -1,77 +1,23 @@
 # splash_screen_ext
 
-[![Github Actions Status](/workflows/Build/badge.svg)](/actions/workflows/build.yml)
+An extension for JupyterLab that replaces the default Splash Screen with a custom GIF. The selection of GIFs is predefined and limited.
 
-A JupyterLab extension.
+## Features
 
-## Requirements
+To change the GIF on the Splash Screen, follow these steps:
 
-- JupyterLab >= 4.0.0
+1. Open the **Settings Editor**;
+2. Navigate to the **Custom Splash** section;
+3. Select a new GIF from the dropdown menu.
 
-## Install
+## Adding Your Own GIF
 
-To install the extension, execute:
+To add your own custom GIF, follow these steps:
 
-```bash
-pip install splash_screen_ext
-```
-
-## Uninstall
-
-To remove the extension, execute:
-
-```bash
-pip uninstall splash_screen_ext
-```
-
-## Contributing
-
-### Development install
-
-Note: You will need NodeJS to build the extension package.
-
-The `jlpm` command is JupyterLab's pinned version of
-[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
-`yarn` or `npm` in lieu of `jlpm` below.
-
-```bash
-# Clone the repo to your local environment
-# Change directory to the splash_screen_ext directory
-# Install package in development mode
-pip install -e "."
-# Link your development version of the extension with JupyterLab
-jupyter labextension develop . --overwrite
-# Rebuild extension Typescript source after making changes
-jlpm build
-```
-
-You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
-
-```bash
-# Watch the source directory in one terminal, automatically rebuilding when needed
-jlpm watch
-# Run JupyterLab in another terminal
-jupyter lab
-```
-
-With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
-
-By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
-
-```bash
-jupyter lab build --minimize=False
-```
-
-### Development uninstall
-
-```bash
-pip uninstall splash_screen_ext
-```
-
-In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
-command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `splash-screen-ext` within that folder.
-
-### Packaging the extension
-
-See [RELEASE](RELEASE.md)
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/MrCrashLab/splash_screen_ext.git
+   ```
+2. Add your GIF to the ```style/images/``` directory.
+3. Update the ```splashScreenConfig``` dictionary in the ```src/index.ts``` file by adding the path to your GIF and its duration.
+4. In the ```schema/custom-splash.json``` file, add the key name from step 3 to the enum section.
